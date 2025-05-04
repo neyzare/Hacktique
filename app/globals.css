@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  background-color: white;
+}
+
+.bgCustom {
+  background-color: #1D232A;
+}
+
+.colorTerminal {
+  color: #00C951;
+}
