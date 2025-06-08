@@ -1,35 +1,29 @@
-import Image, { StaticImageData } from "next/image";
-
 interface ArticleProps {
   title: string;
   description: string;
   url: string;
-  image: string | StaticImageData;
 }
 
-export default function ArticleCard({ title, description, url, image }: ArticleProps) {
+export default function ArticleCard({ title, description, url }: ArticleProps) {
   return (
-    <div className="flex flex-col justify-between bg-white rounded shadow-md overflow-hidden w-full max-w-sm h-full min-h-[500px] gap-4">
-      <Image
-        className="w-full"
-        src={image}
-        alt={title}
-        width={400}
-        height={200}
-      />
-      <div className="px-6 py-4">
-        <h3 className="font-bold text-xl mb-2 text-black">{title}</h3>
-        <p className="text-gray-700 text-base">{description}</p>
-      </div>
-      <div className="px-6 pb-4">
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary w-full"
-        >
-          Lire l’article ↗
-        </a>
+    <div className="w-full max-w-md p-6 rounded-2xl border border-gray-100 shadow-sm bg-gradient-to-br from-white to-gray-50 hover:shadow-md transition-shadow duration-300">
+      <div className="flex flex-col gap-4">
+        <h3 className="text-2xl font-semibold text-gray-900 leading-snug tracking-tight">
+          {title}
+        </h3>
+        <p className="text-gray-600 text-base leading-relaxed">
+          {description}
+        </p>
+        <div>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+          >
+            Lire l’article ↗
+          </a>
+        </div>
       </div>
     </div>
   );
