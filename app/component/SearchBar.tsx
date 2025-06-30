@@ -28,7 +28,6 @@ export default function SearchBar() {
         alt="loupe"
         width={20}
         height={20}
-       
       />
       </button>
 
