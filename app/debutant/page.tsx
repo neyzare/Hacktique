@@ -1,8 +1,11 @@
 'use client';
 
+import Quiz from "../component/Quiz";
+
 function DebutantPage() {
   return (
-    <div className="flex flex-col lg:flex-row max-w-7xl mx-auto p-6">
+    <>
+     <div className="flex flex-col lg:flex-row max-w-7xl mx-auto p-6">
       {/* Sidebar à gauche */}
       <aside className="w-full lg:w-64 mb-8 lg:mb-0 border-r lg:pr-6 text-sm">
         <h2 className="text-lg font-semibold mb-4">Chapitres</h2>
@@ -93,9 +96,15 @@ function DebutantPage() {
           <li><a href="https://www.root-me.org/" className="text-blue-500 hover:underline" target="_blank">Root-Me — Web > SQL</a></li>
           <li><a href="https://github.com/digininja/DVWA" className="text-blue-500 hover:underline" target="_blank">DVWA (Damn Vulnerable Web App)</a></li>
         </ul>
+        <Quiz/>
       </div>
+      
     </div>
+    
+    </>
   );
 }
+
+
 
 export default DebutantPage;
